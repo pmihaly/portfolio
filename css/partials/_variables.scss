@@ -1,0 +1,31 @@
+$tablet: "(min-width: 768px)";
+$laptop: "(min-width: 1024px)";
+$laptop-l: "(min-width: 1440px)";
+
+$primary-color: white;
+$secondary-color: #d00000;
+
+$background-color: #03071e;
+$background-color-alpha: rgba(3, 7, 30, 0.8);
+
+$dark-sienna: #370617;
+$rosewood: #6a040f;
+$dark-red: #9d0208;
+$secondary-color: #d00000;
+$vermilion: #dc2f02;
+$persimmon: #e85d04;
+$carrot-orange: #f48c06;
+$orange-web: #faa307;
+$selective-yellow: #ffba08;
+
+$gradient: linear-gradient(
+  90deg,
+  $secondary-color,
+  $vermilion,
+  $persimmon,
+  $carrot-orange,
+  $orange-web,
+  $selective-yellow
+);
+
+$transition: 0.2s ease;

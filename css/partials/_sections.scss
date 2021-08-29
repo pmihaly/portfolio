@@ -1,0 +1,21 @@
+section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 25vh;
+  padding: 100px 40vw;
+
+  h3.section-title {
+    margin-bottom: 4rem;
+  }
+}
+
+.section1-divider {
+  background-image: url("/assets/svg/layered-waves-haikei.svg");
+  // display: block;
+}
+
+.section1 {
+  background-color: $dark-sienna;
+}

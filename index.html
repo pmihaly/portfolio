@@ -1,103 +1,142 @@
 <!DOCTYPE html>
-<!--
-	Solid State by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html lang="hu">
-
-<head>
-    <title>Papp Mihály | Full stack webfejlesztő</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Agilis, eltökélt full stack webfejlesztő." />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="icon" href="images/favicon.ico" />
-    <noscript>
-        <link rel="stylesheet" href="assets/css/noscript.css" />
-    </noscript>
-</head>
-
-<body>
-    <div id="page-wrapper">
-        <section id="banner">
-            <div class="inner">
-                <h2>Papp Mihály</h2>
-                <p>Full stack webfejlesztő</p>
-                <a target="_blank" href="https://github.com/pmihaly" class="button default small icon brands fa-github">Github</a>
-                <a target="_blank" href="https://docs.google.com/document/d/1lfXamdM9y0UoTkBDoaJpchY1-y-VcnXixvwXmjLloUI/export?format=pdf"
-                    class="button icon default small solid fa-download">Önéletrajz</a>
-            </div>
-        </section>
-
-
-        <section class="wrapper style1">
-            <div class="inner">
-                <h2 class="major">Projektek</h2>
-                <p>
-                    További projektekért lásd a
-                    <a target="_blank" href="https://github.com/pmihaly">github profilomat</a>.
-                </p>
-                <section class="features">
-
-                    <article>
-                        <a target="_blank" href="https://github.com/pmihaly/konyvhegy" class="image"><img
-                                src="https://user-images.githubusercontent.com/47941079/129947712-c5ff666e-608e-442f-a4dd-bd188766d140.png"
-                                alt="könyvhegy screenshot" /></a>
-                        <h3 class="major">Könyvhegy</h3>
-                        <p>
-                            PHP Laravel \ Vuejs \ Vuex \ Vuetify
-                            <br> A következő generációs könyvtáros program
-                        </p>
-                        <p>Még nincs demó.</p>
-                        <a target="_blank" href="https://github.com/pmihaly/konyvhegy" class="special">Kód</a>
-                    </article>
-
-
-                    <article>
-                        <a target="_blank" href="https://github.com/pmihaly/cserkweb" class="image"><img
-                                src="https://user-images.githubusercontent.com/47941079/130056456-67ac8987-df33-473f-a2c1-8b6d1b77ec7b.png"
-                                alt="cserkweb screenshot" /></a>
-                        <h3 class="major">1111. Szent István cserkészcsapat új weboldala</h3>
-                        <p>
-                            Python Django \ Material UI \ CI/CD \ Docker
-                            <br>
-                            Prospektus-szerű weboldal blog rendszerrel
-                        </p>
-                        <a target="_blank" href="https://cserkweb.pappmihaly.com" class="special">Oldalhoz</a>
-                        <a target="_blank" href="https://github.com/pmihaly/cserkweb" class="special">Kód</a>
-                    </article>
-
-
-                </section>
-            </div>
-
-            <section id="footer">
-                <div class="inner">
-                    <h2 class="major">Vegyük fel a kapcsolatot!</h2>
-                    <ul class="contact">
-                        <li class="icon solid fa-envelope">
-                            <script>
-                                emailE = 'pappmihaly.com'
-                                emailE = ('misi' + '@' + emailE)
-                                document.write('<a target="_blank" href="mailto:' + emailE + '">' + emailE + '</a>')
-                            </script>
-
-                            <noscript>
-                                <em>Email cím Javascripttel blokkolva, kapcsold be hogy megtekintsd.</em>
-                            </noscript>
-                        </li>
-                        <li class="icon brands fa-github">
-                            <a target="_blank" href="https://github.com/pmihaly">https://github.com/pmihaly</a>
-                        </li>
-                    </ul>
-                    <ul class="copyright">
-                        <li>&copy; Papp Mihály</li>
-                        <li>Design: <a target="_blank" href="http://html5up.net">HTML5 UP</a></li>
-                    </ul>
-                </div>
-            </section>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🧑‍💻 HTML és CSS alapismereteim felfrissítése</title>
+    <meta
+      name="description"
+      content="Agilis, eltökélt full stack webfejlesztő."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="hero rellax" data-rellax-speed="-10">
+      <img
+        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallup.net%2Fwp-content%2Fuploads%2F2016%2F12%2F08%2F392095-anime-dog-Shiba_Inu.jpg&f=1&nofb=1"
+        alt="Hero image"
+        class="hero-img"
+      />
+      <div class="hero-overlay"></div>
+      <header class="rellax" data-rellax-speed="1">
+        <h1>Papp Mihály</h1>
+        <h2>Full-stack szoftverfejlesztő</h2>
+      </header>
     </div>
-</body>
+    <div class="spacer section1-divider"></div>
+    <section class="section1">
+      <h3 class="section-title">Projektek</h3>
 
+      <div class="card-grid">
+        <article class="card">
+          <div class="card-img">
+            <img src="/assets/png/cserkweb.png" />
+            <div class="card-img-overlay"></div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">
+              1111. Szent István Cserkészcsapat új weboldala
+            </h3>
+            <ul class="card-breadcrumb">
+              <li>🐍 Python Django</li>
+              <li>🧪 Unit testing</li>
+              <li>📦 Docker</li>
+              <li>🏗 CI/CD</li>
+            </ul>
+            <div class="card-text">
+              Csapatot bemutató weboldal blog rendszerrel
+            </div>
+            <div class="card-actions">
+              <a
+                href="https://cserkweb.pappmihaly.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-go btn-no-shadow"
+              >
+                Demó
+              </a>
+              <a
+                href="https://github.com/pmihaly/cserkweb"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-go btn-no-shadow"
+              >
+                Github
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img">
+            <img src="/assets/png/konyvhegy.png" />
+            <div class="card-img-overlay"></div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Könyvhegy</h3>
+            <ul class="card-breadcrumb">
+              <li>🏮 PHP Laravel</li>
+              <li>🍃 Vue</li>
+              <li>🏪 Vuex</li>
+              <li>🌟 Vuetify</li>
+            </ul>
+            <div class="card-text">A következő generációs könyvtár program</div>
+            <div class="card-actions">
+              <a
+                href="https://github.com/pmihaly/konyvhegy"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-go btn-no-shadow"
+              >
+                Github
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img">
+            <img src="https://source.unsplash.com/random?website" />
+            <div class="card-img-overlay"></div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">pappmihaly.com</h3>
+            <ul class="card-breadcrumb">
+              <li>HTML5</li>
+              <li>SASS</li>
+              <li>CSS Grid</li>
+              <li>CSS Flexbox</li>
+            </ul>
+            <div class="card-text">
+              Portfólióoldalam egyedi CSS-el (ez az oldal)
+            </div>
+            <div class="card-actions">
+              <a
+                href="https://github.com/pmihaly/pappmihaly.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-go btn-no-shadow"
+              >
+                Github
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <a
+        href="https://github.com/pmihaly"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-go"
+      >
+        Többi projektjeim
+      </a>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/rellax@1.12.1/rellax.min.js"></script>
+    <script>
+      var rellax = new Rellax(".rellax");
+    </script>
+  </body>
 </html>
