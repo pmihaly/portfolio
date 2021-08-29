@@ -107,7 +107,7 @@
   }
 }
 
-@media #{$laptop-l} {
+@media #{$laptop} {
   .card {
     .card-img .card-img-overlay {
       opacity: 1;
@@ -177,6 +177,6 @@
   .card,
   .card .card-img img,
   .card .card-img .card-img-overlay {
-    width: 30vw;
+    width: 35vw;
   }
 }

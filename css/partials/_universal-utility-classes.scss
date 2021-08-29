@@ -1,3 +1,10 @@
+@mixin btn-hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0rem 0rem 0rem black;
+}
+
 @mixin btn {
   background-image: $gradient;
   font-weight: 800;
@@ -16,10 +23,15 @@
     box-shadow: 1rem 1rem 0.2rem black;
 
     &:hover {
-      background-position: right center; /* change the direction of the change here */
-      color: #fff;
-      text-decoration: none;
-      box-shadow: 0rem 0rem 0rem black;
+      @include btn-hover;
+    }
+  }
+
+  &.btn-less-shadow {
+    box-shadow: 0.5rem 0.5rem 0.2rem black;
+
+    &:hover {
+      @include btn-hover;
     }
   }
 

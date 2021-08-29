@@ -70,6 +70,20 @@ a {
           box-shadow: 0rem 0rem 0rem black;
 }
 
+.btn.btn-less-shadow {
+  -webkit-box-shadow: 0.5rem 0.5rem 0.2rem black;
+          box-shadow: 0.5rem 0.5rem 0.2rem black;
+}
+
+.btn.btn-less-shadow:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+  -webkit-box-shadow: 0rem 0rem 0rem black;
+          box-shadow: 0rem 0rem 0rem black;
+}
+
 .btn.btn-go::before {
   /* https://unicodearrows.com/ */
   content: "\21ac  ";
@@ -337,7 +351,7 @@ section h3.section-title {
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   .card .card-img .card-img-overlay {
     opacity: 1;
   }
@@ -407,6 +421,18 @@ section h3.section-title {
     -webkit-box-shadow: 0rem 0rem 0rem black;
             box-shadow: 0rem 0rem 0rem black;
   }
+  .card:hover .card-content .card-actions > *.btn-less-shadow {
+    -webkit-box-shadow: 0.5rem 0.5rem 0.2rem black;
+            box-shadow: 0.5rem 0.5rem 0.2rem black;
+  }
+  .card:hover .card-content .card-actions > *.btn-less-shadow:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+    -webkit-box-shadow: 0rem 0rem 0rem black;
+            box-shadow: 0rem 0rem 0rem black;
+  }
   .card:hover .card-content .card-actions > *.btn-go::before {
     /* https://unicodearrows.com/ */
     content: "\21ac  ";
@@ -428,7 +454,7 @@ section h3.section-title {
   .card,
   .card .card-img img,
   .card .card-img .card-img-overlay {
-    width: 30vw;
+    width: 35vw;
   }
 }
 
