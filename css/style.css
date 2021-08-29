@@ -163,7 +163,7 @@ section {
       -ms-flex-align: center;
           align-items: center;
   min-height: 25vh;
-  padding: 100px 40vw;
+  padding: 100px 0px;
 }
 
 section h3.section-title {
@@ -176,6 +176,12 @@ section h3.section-title {
 
 .section1 {
   background-color: #370617;
+}
+
+@media (min-width: 1440px) {
+  section {
+    padding: 100px 40vw;
+  }
 }
 
 .card-grid {
@@ -219,7 +225,7 @@ section h3.section-title {
           box-shadow: 1rem 1rem 0.2rem black;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
-  width: 60vw;
+  width: 80vw;
 }
 
 .card .card-img {
@@ -227,7 +233,7 @@ section h3.section-title {
 }
 
 .card .card-img img {
-  width: 60vw;
+  width: 80vw;
 }
 
 .card .card-img > * {
@@ -274,7 +280,12 @@ section h3.section-title {
 }
 
 .card .card-content .card-title {
-  color: #d00000;
+  background: -webkit-gradient(linear, left top, right top, from(#d00000), color-stop(#dc2f02), color-stop(#e85d04), color-stop(#f48c06), color-stop(#faa307), to(#ffba08));
+  background: linear-gradient(90deg, #d00000, #dc2f02, #e85d04, #f48c06, #faa307, #ffba08);
+  text-shadow: none;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 1.7rem;
 }
 
@@ -311,8 +322,8 @@ section h3.section-title {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .card .card-content .card-actions > * {

@@ -19,13 +19,13 @@
   background-color: $background-color;
   box-shadow: 1rem 1rem 0.2rem black;
   transition: $transition;
-  width: 60vw;
+  width: 80vw;
 
   .card-img {
     position: relative;
 
     img {
-      width: 60vw;
+      width: 80vw;
     }
 
     > * {
@@ -60,7 +60,11 @@
     }
 
     .card-title {
-      color: $secondary-color;
+      background: $gradient;
+      text-shadow: none;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       font-size: 1.7rem;
     }
 
@@ -86,7 +90,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
 
       > * {
         box-shadow: none;
