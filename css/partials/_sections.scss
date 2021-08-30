@@ -1,27 +1,120 @@
+$background-img-height: 100%;
+
 section {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 25vh;
-  padding: 100px 0px;
+  min-height: 100vh;
+  padding: 100px 10vw;
 
   h3.section-title {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
   }
 }
 
 .section1-divider {
-  background-image: url("/assets/svg/layered-waves-haikei.svg");
-  // display: block;
+  background-image: url("/assets/svg/section1-divider.svg");
+
+  &.spacer {
+    height: 125vh;
+    aspect-ratio: 960/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+    position: relative;
+  }
 }
 
 .section1 {
   background-color: $dark-sienna;
+  z-index: 2;
+}
+
+.section2 {
+  background-color: $background-color;
+  position: relative;
+  padding-top: 50vh;
+  z-index: 1;
+
+  .section2-divider {
+    background-image: url("/assets/svg/section1-divider.svg");
+    transform: rotate(180deg);
+    height: 100vh;
+    aspect-ratio: 960/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
+
+  .section2-background {
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+    position: absolute;
+    left: 0;
+    top: $background-img-height * -1;
+    width: 100%;
+    height: $background-img-height;
+
+    &::after {
+      position: relative;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: $background-img-height;
+      object-fit: cover;
+    }
+
+    .section2-backround-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: $background-img-height;
+      background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='30' height='30' patternTransform='scale(1) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(231, 82%, 6%, 0.8)'/><path d='M3.25 10h13.5M10 3.25v13.5' transform='translate(5,0)' stroke-linecap='square' stroke-width='1' stroke='hsla(231, 82%, 6%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+      z-index: 1;
+    }
+  }
+
+  .section2-container {
+    > div {
+      margin-bottom: 5rem;
+      > p {
+        margin-bottom: 3rem;
+      }
+    }
+  }
 }
 
 @media #{$laptop-l} {
   section {
     padding: 100px 40vw;
+
+    h3.section-title {
+      margin-bottom: 4rem;
+    }
+  }
+
+  .section2 {
+    .section2-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 20vw;
+
+      * {
+        width: 20vw;
+      }
+    }
   }
 }

@@ -14,17 +14,20 @@ body {
   color: white;
 }
 
-:root::-webkit-scrollbar {
+:root::-webkit-scrollbar,
+*::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
 
-:root::-webkit-scrollbar-thumb {
+:root::-webkit-scrollbar-thumb,
+*::-webkit-scrollbar-thumb {
   background: #6a040f;
   border-radius: 10px;
 }
 
-:root::-webkit-scrollbar-track {
+:root::-webkit-scrollbar-track,
+*::-webkit-scrollbar-track {
   background: #03071e;
 }
 
@@ -51,6 +54,7 @@ a {
   background-size: 200% auto;
   color: white;
   border-radius: 10px;
+  border: none;
   display: block;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
@@ -87,6 +91,48 @@ a {
 .btn.btn-go::before {
   /* https://unicodearrows.com/ */
   content: "\21ac  ";
+}
+
+.contact-form .row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  position: relative;
+  border-radius: 10px;
+  border: 2px solid #6a040f;
+  color: white;
+  background: rgba(3, 7, 30, 0.7);
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 10px 0;
+  resize: none;
+}
+
+.contact-form textarea {
+  height: 200px;
+}
+
+.contact-form .input50 {
+  width: 50%;
+  margin: 0 10px;
+}
+
+.contact-form .input100 {
+  width: 100%;
+  margin: 0 10px;
+}
+
+.contact-form form {
+  width: 100%;
 }
 
 .hero {
@@ -153,17 +199,6 @@ header h2 {
   font-size: 2rem;
 }
 
-.spacer {
-  height: 125vh;
-  aspect-ratio: 960/300;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  z-index: 1;
-  position: relative;
-}
-
 section {
   position: relative;
   display: -webkit-box;
@@ -176,25 +211,116 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 25vh;
-  padding: 100px 0px;
+  min-height: 100vh;
+  padding: 100px 10vw;
 }
 
 section h3.section-title {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .section1-divider {
-  background-image: url("/assets/svg/layered-waves-haikei.svg");
+  background-image: url("/assets/svg/section1-divider.svg");
+}
+
+.section1-divider.spacer {
+  height: 125vh;
+  aspect-ratio: 960/300;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
+  position: relative;
 }
 
 .section1 {
   background-color: #370617;
+  z-index: 2;
+}
+
+.section2 {
+  background-color: #03071e;
+  position: relative;
+  padding-top: 50vh;
+  z-index: 1;
+}
+
+.section2 .section2-divider {
+  background-image: url("/assets/svg/section1-divider.svg");
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  height: 100vh;
+  aspect-ratio: 960/300;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.section2 .section2-background {
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+  position: absolute;
+  left: 0;
+  top: -100%;
+  width: 100%;
+  height: 100%;
+}
+
+.section2 .section2-background::after {
+  position: relative;
+}
+
+.section2 .section2-background img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.section2 .section2-background .section2-backround-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='30' height='30' patternTransform='scale(1) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(231, 82%, 6%, 0.8)'/><path d='M3.25 10h13.5M10 3.25v13.5' transform='translate(5,0)' stroke-linecap='square' stroke-width='1' stroke='hsla(231, 82%, 6%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+  z-index: 1;
+}
+
+.section2 .section2-container > div {
+  margin-bottom: 5rem;
+}
+
+.section2 .section2-container > div > p {
+  margin-bottom: 3rem;
 }
 
 @media (min-width: 1440px) {
   section {
     padding: 100px 40vw;
+  }
+  section h3.section-title {
+    margin-bottom: 4rem;
+  }
+  .section2 .section2-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 20vw;
+            column-gap: 20vw;
+  }
+  .section2 .section2-container * {
+    width: 20vw;
   }
 }
 
@@ -346,6 +472,12 @@ section h3.section-title {
           box-shadow: none;
 }
 
+.card.contact-card {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 @media (min-width: 768px) {
   .card .card-title {
     font-size: 1.7rem;
@@ -353,14 +485,14 @@ section h3.section-title {
 }
 
 @media (min-width: 1024px) {
-  .card .card-img .card-img-overlay {
+  .card:not(.contact-card) .card-img .card-img-overlay {
     opacity: 1;
   }
-  .card .card-content > * {
+  .card:not(.contact-card) .card-content > * {
     -webkit-filter: grayscale(1);
             filter: grayscale(1);
   }
-  .card .card-content .card-title {
+  .card:not(.contact-card) .card-content .card-title {
     background: #d00000;
     text-shadow: none;
     background-clip: text;
@@ -369,23 +501,23 @@ section h3.section-title {
     -webkit-transition: 0.2s ease ease;
     transition: 0.2s ease ease;
   }
-  .card .card-content .card-actions > * {
+  .card:not(.contact-card) .card-content .card-actions > * {
     background: #d00000;
     -webkit-transition: 0.2s ease ease;
     transition: 0.2s ease ease;
   }
-  .card:hover {
+  .card:not(.contact-card):hover {
     -webkit-box-shadow: 0.5rem 0.5rem 0.2rem black;
             box-shadow: 0.5rem 0.5rem 0.2rem black;
   }
-  .card:hover .card-img .card-img-overlay {
+  .card:not(.contact-card):hover .card-img .card-img-overlay {
     opacity: 0.3;
   }
-  .card:hover .card-content > * {
+  .card:not(.contact-card):hover .card-content > * {
     -webkit-filter: grayscale(0);
             filter: grayscale(0);
   }
-  .card:hover .card-content .card-title {
+  .card:not(.contact-card):hover .card-content .card-title {
     background: -webkit-gradient(linear, left top, right top, from(#d00000), color-stop(#dc2f02), color-stop(#e85d04), color-stop(#f48c06), color-stop(#faa307), to(#ffba08));
     background: linear-gradient(90deg, #d00000, #dc2f02, #e85d04, #f48c06, #faa307, #ffba08);
     text-shadow: none;
@@ -393,7 +525,7 @@ section h3.section-title {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  .card:hover .card-content .card-actions > * {
+  .card:not(.contact-card):hover .card-content .card-actions > * {
     background-image: -webkit-gradient(linear, left top, right top, from(#d00000), color-stop(#dc2f02), color-stop(#e85d04), color-stop(#f48c06), color-stop(#faa307), to(#ffba08));
     background-image: linear-gradient(90deg, #d00000, #dc2f02, #e85d04, #f48c06, #faa307, #ffba08);
     font-weight: 800;
@@ -406,15 +538,16 @@ section h3.section-title {
     background-size: 200% auto;
     color: white;
     border-radius: 10px;
+    border: none;
     display: block;
     -webkit-transition: 0.2s ease;
     transition: 0.2s ease;
   }
-  .card:hover .card-content .card-actions > *:not(.btn-no-shadow) {
+  .card:not(.contact-card):hover .card-content .card-actions > *:not(.btn-no-shadow) {
     -webkit-box-shadow: 1rem 1rem 0.2rem black;
             box-shadow: 1rem 1rem 0.2rem black;
   }
-  .card:hover .card-content .card-actions > *:not(.btn-no-shadow):hover {
+  .card:not(.contact-card):hover .card-content .card-actions > *:not(.btn-no-shadow):hover {
     background-position: right center;
     /* change the direction of the change here */
     color: #fff;
@@ -422,11 +555,11 @@ section h3.section-title {
     -webkit-box-shadow: 0rem 0rem 0rem black;
             box-shadow: 0rem 0rem 0rem black;
   }
-  .card:hover .card-content .card-actions > *.btn-less-shadow {
+  .card:not(.contact-card):hover .card-content .card-actions > *.btn-less-shadow {
     -webkit-box-shadow: 0.5rem 0.5rem 0.2rem black;
             box-shadow: 0.5rem 0.5rem 0.2rem black;
   }
-  .card:hover .card-content .card-actions > *.btn-less-shadow:hover {
+  .card:not(.contact-card):hover .card-content .card-actions > *.btn-less-shadow:hover {
     background-position: right center;
     /* change the direction of the change here */
     color: #fff;
@@ -434,7 +567,7 @@ section h3.section-title {
     -webkit-box-shadow: 0rem 0rem 0rem black;
             box-shadow: 0rem 0rem 0rem black;
   }
-  .card:hover .card-content .card-actions > *.btn-go::before {
+  .card:not(.contact-card):hover .card-content .card-actions > *.btn-go::before {
     /* https://unicodearrows.com/ */
     content: "\21ac  ";
   }
