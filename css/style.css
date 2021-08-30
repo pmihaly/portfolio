@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +9,8 @@
 }
 
 html,
-body {
+body,
+input {
   font-family: "Montserrat", sans-serif;
   background-color: black;
   color: white;
@@ -91,6 +93,10 @@ a {
 .btn.btn-go::before {
   /* https://unicodearrows.com/ */
   content: "\21ac  ";
+}
+
+.contact-form *:not(.btn) {
+  font-family: "DM Mono", monospace;
 }
 
 .contact-form .row {
@@ -496,7 +502,7 @@ section h3.section-title {
       flex-wrap: wrap;
 }
 
-.card .card-content .card-actions > * {
+.card .card-content .card-actions > *:not(.contact-form-btn) {
   -webkit-box-shadow: none;
           box-shadow: none;
 }

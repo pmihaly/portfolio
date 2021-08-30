@@ -47,6 +47,10 @@
 }
 
 .contact-form {
+  *:not(.btn) {
+    font-family: "DM Mono", monospace;
+  }
+
   .row {
     width: 100%;
     display: flex;
