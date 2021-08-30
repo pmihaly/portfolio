@@ -314,7 +314,11 @@ section h3.section-title {
 }
 
 .section2 .section2-container > div > p {
-  margin-bottom: 3rem;
+  font-size: 1.1rem;
+}
+
+.section2 .section2-container > div > a {
+  margin-top: 3rem;
 }
 
 @media (min-width: 1024px) {
@@ -331,6 +335,9 @@ section h3.section-title {
         grid-template-columns: 1fr 1fr;
     -webkit-column-gap: 20vw;
             column-gap: 20vw;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
   }
   .section2 .section2-container * {
     width: 20vw;

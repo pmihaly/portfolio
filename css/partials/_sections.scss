@@ -96,7 +96,11 @@ section {
       margin-bottom: 5rem;
 
       > p {
-        margin-bottom: 3rem;
+        font-size: 1.1rem;
+      }
+
+      > a {
+        margin-top: 3rem;
       }
     }
   }
@@ -116,6 +120,7 @@ section {
       display: grid;
       grid-template-columns: 1fr 1fr;
       column-gap: 20vw;
+      align-items: start;
 
       * {
         width: 20vw;
