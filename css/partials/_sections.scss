@@ -14,7 +14,7 @@ section {
 }
 
 .section1-divider {
-  background-image: url("/assets/svg/section1-divider.svg");
+  background-image: url("/assets/svg/section1-2-divider.svg");
 
   &.spacer {
     height: 125vh;
@@ -40,7 +40,7 @@ section {
   z-index: 1;
 
   .section2-divider {
-    background-image: url("/assets/svg/section1-divider.svg");
+    background-image: url("/assets/svg/section1-2-divider.svg");
     transform: rotate(180deg);
     height: 100vh;
     aspect-ratio: 960/300;
