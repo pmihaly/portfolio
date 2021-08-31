@@ -119,22 +119,12 @@ a {
   outline: none;
   font-size: 1rem;
   font-weight: 300;
-  margin: 10px 0;
+  margin: 10px 10px;
   resize: none;
 }
 
 .contact-form textarea {
   height: 200px;
-}
-
-.contact-form .input50 {
-  width: 50%;
-  margin: 0 10px;
-}
-
-.contact-form .input100 {
-  width: 100%;
-  margin: 0 10px;
 }
 
 .contact-form form {
