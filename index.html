@@ -110,7 +110,7 @@
             </div>
             <div class="card-actions">
               <a
-                href="https://github.com/pmihaly/pappmihaly.com"
+                href="https://github.com/pmihaly/portfolio"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="btn btn-go btn-no-shadow btn-less-shadow"
@@ -145,11 +145,16 @@
         <div>
           <h3 class="section-title">Rólam</h3>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Repellendus illum maxime tempore fugit doloribus totam. Autem
-            reprehenderit quos aspernatur quae aut, consequatur nihil excepturi
-            officiis suscipit cum, cumque eveniet modi temporibus eum eos
-            praesentium molestiae veritatis placeat ut quisquam dolorem.
+            Lelkesen tanulok technológiákat, legyen szó a legújabb frontend
+            Javascript könyvtárról, vagy a leghasznosabb backend
+            keretrendszerekről. Szeretek igényes és hasznos szoftvereket,
+            weboldalakat vagy mobil appokat készíteni.
+            <br />
+            <br />
+            A kódolás mellet nagyon érdekel a szerverkarbantartás, CI/CD
+            pipeline-ok telepítése és microservices architecture tervezése,
+            valamint kiépítése. Vedd fel velem a kapcsolatot, ha bármilyen
+            hasonló munkádban segítségedre tudok lenni!
           </p>
           <a
             href="https://github.com/pmihaly"
@@ -170,49 +175,46 @@
                 method="POST"
               >
                 <div class="row">
-                  <div class="input100">
-                    <input
-                      type="text"
-                      placeholder="Név"
-                      name="_name
+                  <input
+                    type="text"
+                    placeholder="Szép neved"
+                    name="_name
                     "
-                      required
-                    />
-                  </div>
+                    required
+                  />
                 </div>
 
                 <div class="row">
-                  <div class="input50">
+                  <input
+                    type="email"
+                    placeholder="Email címed"
+                    name="_replyto"
+                    required
+                  />
+                </div>
+                <div class="row">
+                  <input
+                    type="text"
+                    placeholder="Üzeneted tárgya"
+                    name="subject"
+                    required
+                  />
+                </div>
+
+                <div class="row">
+                  <textarea
+                    placeholder="Üzeneted"
+                    name="message"
+                    required
+                  ></textarea>
+                </div>
+                <div class="row">
+                  <div class="card-actions">
                     <input
-                      type="email"
-                      placeholder="Email cím"
-                      name="_replyto"
-                      required
+                      type="submit"
+                      value="Küldés"
+                      class="btn btn-go btn-less-shadow contact-form-btn"
                     />
-                  </div>
-
-                  <div class="input50">
-                    <input
-                      type="text"
-                      placeholder="Tárgy"
-                      name="subject"
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="input100">
-                    <textarea
-                      placeholder="Üzenj valamit..."
-                      name="message"
-                      required
-                    ></textarea>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="input100 card-actions">
-                    <input type="submit" value="Küldés" class="btn btn-go" />
                   </div>
                 </div>
               </form>

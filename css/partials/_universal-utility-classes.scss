@@ -47,6 +47,10 @@
 }
 
 .contact-form {
+  *:not(.btn) {
+    font-family: "DM Mono", monospace;
+  }
+
   .row {
     width: 100%;
     display: flex;
@@ -65,24 +69,13 @@
     outline: none;
     font-size: 1rem;
     font-weight: 300;
-    margin: 10px 0;
+    margin: 10px 10px;
     resize: none;
   }
 
   textarea {
     height: 200px;
   }
-
-  .input50 {
-    width: 50%;
-    margin: 0 10px;
-  }
-
-  .input100 {
-    width: 100%;
-    margin: 0 10px;
-  }
-
   form {
     width: 100%;
   }
